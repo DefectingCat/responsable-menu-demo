@@ -1,7 +1,8 @@
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import cn from 'classnames';
 import MenuBtn from './nav-bar/MenuBtn';
 import MenuItem from './nav-bar/MenuItem';
+import { useMediaMatch, useOutsideClick } from 'rooks';
 
 export type MenuItems = {
   name: string;
@@ -53,6 +54,14 @@ const menuItems = [
 
 const NavBar: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const isNarrowWidth = useMediaMatch('(max-width: 640px)');
+
+  const ref = useRef(null);
+  const handleMenuClick = () => {
+    if (!isNarrowWidth) return;
+    setShowMenu(!showMenu);
+  };
+  useOutsideClick(ref, handleMenuClick);
 
   return (
     <>
@@ -62,8 +71,9 @@ const NavBar: FC = () => {
           'md:col-span-4 md:flex-col',
           'xl:col-span-2'
         )}
+        ref={ref}
       >
-        <MenuBtn className="mr-1" onClick={() => setShowMenu(!showMenu)} />
+        <MenuBtn className="mr-1" onClick={handleMenuClick} />
 
         <div className={cn('md:mb-4')}>Here is Logo</div>
 

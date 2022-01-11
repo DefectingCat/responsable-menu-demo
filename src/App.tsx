@@ -6,8 +6,8 @@ function App() {
   return (
     <div
       className={cn(
-        'grid grid-cols-12 gap-4 container mx-auto p-2',
-        'xl:grid-cols-8'
+        'grid grid-cols-12 gap-4 mx-auto p-2',
+        'xl:grid-cols-8 xl:container'
       )}
     >
       <NavBar />

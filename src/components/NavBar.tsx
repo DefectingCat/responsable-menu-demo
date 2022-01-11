@@ -75,7 +75,7 @@ const NavBar: FC = () => {
       >
         <MenuBtn className="mr-1" onClick={handleMenuClick} />
 
-        <div className={cn('md:mb-4')}>Here is Logo</div>
+        <div className={cn('md:mb-2')}>Here is Logo</div>
 
         <div
           className={cn(
@@ -87,7 +87,7 @@ const NavBar: FC = () => {
           <nav
             className={cn(
               'absolute left-2 bg-white p-4 rounded-lg w-2/3 shadow-sm flex flex-col',
-              'md:relative md:bg-transparent md:w-full md:shadow-none md:items-center md:left-0'
+              'md:relative md:bg-transparent md:w-full md:shadow-none md:items-center md:left-0 md:p-0'
             )}
           >
             {menuItems.map((item) => (

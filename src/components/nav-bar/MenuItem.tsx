@@ -13,7 +13,7 @@ const MenuItem: FC<Props> = ({ menuItem }) => {
         key={menuItem.name}
         className={cn(
           'px-4 py-2 rounded-md select-none transition cursor-pointer',
-          'w-32 flex items-center font-semibold text-lg text-gray-500',
+          'w-full flex items-center font-semibold text-lg text-gray-500',
           'md:my-1 hover:bg-white'
         )}
       >

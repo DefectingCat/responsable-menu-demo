@@ -3,18 +3,20 @@ import cn from 'classnames';
 
 interface Props {
   className?: string;
+  onClick?: () => void;
 }
 
-const MenuBtn: FC<Props> = ({ className }) => {
+const MenuBtn: FC<Props> = ({ className, onClick }) => {
   return (
     <>
       <button
         className={cn(
-          'w-7 h-6 p-1 rounded-md flex items-center',
+          'w-7 h-6 p-1 rounded-md flex items-center transition',
           'hover:bg-brand-grey-200',
           'md:hidden',
           className
         )}
+        onClick={onClick}
       >
         <svg
           className="fill-current"

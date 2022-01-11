@@ -68,8 +68,8 @@ const NavBar: FC = () => {
       <div
         className={cn(
           'col-span-12 flex items-center relative',
-          'md:col-span-4 md:flex-col',
-          'xl:col-span-2'
+          'md:col-span-2 md:flex-col',
+          'xl:col-span-1'
         )}
         ref={ref}
       >

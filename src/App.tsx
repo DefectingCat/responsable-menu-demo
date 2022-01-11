@@ -6,7 +6,7 @@ function App() {
   return (
     <div
       className={cn(
-        'grid grid-cols-12 gap-4 container mx-auto py-2',
+        'grid grid-cols-12 gap-4 container mx-auto p-2',
         'xl:grid-cols-8'
       )}
     >
